@@ -2,13 +2,18 @@
 <html>
 <head>
     <title>Mi documento</title>
+    <style>
+        table, th, td {
+            border: 1px solid darkgray;
+        }
+    </style>
 </head>
 <body>
     <h1>Hola H1</h1>
     <h2>Hola H2</h2>
     <p>Hola parrafo</p>
     <p>Hola segundo parrafo</p>
-    <hr>
+    <hr/>
     <!-- COMENTARIO -->
     <!-- ESTE ES EL FORMATO PARA ESCRIBIR COMENTARIOS -->
 
@@ -16,5 +21,76 @@
     <p>Este es un <span style="color:violet" >texto para usar span</span></p>
     <a href="https://twice.jype.com/Default">Ir a TWICE OFICIAL</a>
     <img  src="img/tw.webp" width="50%"/>
+
+    <!-- Listas -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <ol>
+        <li value="10">Elemento 1</li>
+            <ol>
+                <li style="list-style-type:lower-latin"> sub elemento 1</li>
+                <li style="list-style-type:lower-latin"> sub elemento 2</li>
+                <li style="list-style-type:lower-latin"> sub elemento 3</li>
+            </ol>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+
+
+    <form action="/formulario" method="post">
+        <label for="nombre" >Nombre</label>
+        <input value="Lucas" id="nombre" name="nombre" placeholder="ingresar nombre"/>
+        <label for="apellido">Apellido</label>
+        <input value="Maidana" id="apellido" name="apellido" placeholder="ingresar apellido"/>
+        <label for="email">Correo</label>
+        <input value="lucasmaidana.nhn@gmail.com" type="email" name="email" placeholder="Email"/>
+        <label for="contraseña">Contraseña</label>
+        <input type="contraseña" name="contraseña"placeholder="Contraseña"/>
+        <input type="radio"/>
+        <input type="file"/>
+        <input type="checkbox"/>
+        <br/>
+        <label for="comentario">Comentario</label>
+        <br/>
+        <textarea id="comentario" placeholder="Ingrese comentario" name="comentario" rows="7" cols="50">Este es un comentario por defecto</textarea>
+        <button type="submit">Enviar</button> 
+        <!-- Los botones siempre deben tener especificado su tipo -->
+        <button type="reset">Reiniciar valores</button>
+    </form>
+
+    <hr/>
+
+    <table style="width:500px;">
+        <thead>
+            <tr> <!-- Table Row (fila)-->
+                <th>Producto</th> <!-- Table Header (cabecera )-->
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Harina</td>
+                <td>1600</td>
+            </tr>
+            <tr>
+                <td>Sal</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Libro Harry Potter: 1</td>
+                <td>Final con impuestos 75000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Suma total</td>
+        </tfoot>
+    </table>
 </body>
 </html>
